@@ -1,27 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body{
-        background: #aaadab;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gate Pass System - Student Profile</title>
+  <style>
+    /* General styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
     }
-    .error{
-        display: flex;
-        /* position: absolute; */
-        margin-top: 15%;
-        /* margin-left: 37%; */
-        align-content: center;
-        justify-content: center;
-        align-items: center;
 
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-</style>
+
+    /* Profile information styling */
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #007bff;
+    }
+
+    .profile-info {
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+
+    .profile-info p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .profile-info p strong {
+      font-weight: bold;
+      color: #495057; /* Subtler color for labels */
+    }
+
+    /* Button styling */
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #388e3c; /* Green */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2e7d32; /* Darker green on hover */
+    }
+
+    /* Additional styling */
+    .profile-info p::before {
+      content: ""; /* Add pseudo-element for styling */
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+      border-radius: 50%;
+      background-color: #495057; /* Match label color */
+    }
+
+    h1, .btn {
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+    }
+  </style>
+</head>
 <body>
-    
-    <div class="error">404 | Developer is on Leave</div>
+  <div class="container">
+    <h1>Student Profile</h1>
+    <div class="profile-info">
+      <p><strong>Name:</strong> Ritik</p>
+      <p><strong>ID:</strong> 123456</p>
+      <p><strong>Email:</strong> Ritik@example.com</p>
+      <p><strong>Year:</strong> 3rd Year</p>
+      <p><strong>Department:</strong> information technology</p>
+    </div>
+    <div class="btn-container">
+      <button class="btn" onclick="alert('Requesting Gate Pass...')">Request Gate Pass</button>
+    </div>
+  </div>
+
+  <script>
+    // Example: Simulate sending request after alert
+    function sendRequest(e) {
+      alert('Gate Pass request sent successfully!');
+      e.preventDefault(); // Prevent default form submission behavior
+    }
+
+    // Attach event listener to the button (optional)
+    const btn = document.querySelector('.btn');
+    if (btn) {
+      btn.addEventListener('click', sendRequest);
+    }
+  </script>
 </body>
 </html>
