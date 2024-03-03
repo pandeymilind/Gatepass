@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id='favicon' rel="shortcut icon" href="./images/niet_logo.png" type="image/x-png">
     <title>Welcome Page</title>
 </head>
 <style>
     body{
         background: #e1e1e1;;
     }
-    .button{
+    .buttons{
         display: flex;
         flex-wrap: wrap;
         align-content: center;
@@ -23,6 +22,7 @@
         border-left:2px solid white ;
         padding: 30px;
         transition: 0.3s ease-in-out;
+        margin-bottom: 10px;
     }
     .Login:hover{
         background: #9f9f9f;
@@ -31,9 +31,19 @@
         color:black;
         text-decoration: none;
     }
-    .button{
+    .buttons{
         margin-top: 10%;
         /* margin-left: 38%; */
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .buttons {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: stretch;
+            text-align: center;
+
+        }
     }
 </style>
 <body>
@@ -42,7 +52,7 @@
        <h2 class="title">Smart Gate Pass Approval System</h2>
        <h3 class="details">| It help to reduse paper work as and helps in manage Details |</h3>
 </center> 
-    <div class="button">
+    <div class="buttons">
         <a href="dashboard.html"><div class="Login Dash">Dashboard</div></a>
         <a href="student.html"><div class="Login Stu">Student</div></a> 
         <a href="admin.html"><div class="Login admin">Admin</div></a>
