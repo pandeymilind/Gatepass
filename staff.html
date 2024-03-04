@@ -3,25 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body{
-        background: #aaadab;
-    }
-    .error{
-        display: flex;
-        /* position: absolute; */
-        margin-top: 15%;
-        /* margin-left: 37%; */
-        align-content: center;
-        justify-content: center;
-        align-items: center;
+    <title>Staff Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
-    }
-</style>
+        .profile-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-picture {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #aaa;
+        }
+
+        .profile-info {
+            text-align: center;
+        }
+
+        .profile-info h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .profile-info .label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .profile-info .divider {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .profile-info .social-links {
+            margin-top: 20px;
+        }
+
+        .profile-info .social-links a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .profile-info .social-links a:hover {
+            color: #007bff;
+        }
+
+        .gate-pass-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f200ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .gate-pass-button:hover {
+            background-color: #5f3f00;
+        }
+    </style>
+</head>
 <body>
     
-    <div class="error">404 | Developer is on Leave</div>
+    <div class="profile-container">
+        <div class="profile-picture">
+            <img src="profile_picture.jpg" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <h2>DR Vivek Kumar</h2>
+            <p class="label">Position:</p>
+            <p>Professor</p>
+            <p class="label">Email:</p>
+            <p>vivek.doe@example.com</p>
+            <p class="label">Phone:</p>
+            <p>5546461</p>
+            <p class="label">Department:</p>
+            <p>Computer Science Engineering</p>
+            <div class="divider"></div>
+            
+            <a href="#" class="gate-pass-button">Request Gate Pass</a>
+        </div>
+    </div>
+
 </body>
 </html>
+
